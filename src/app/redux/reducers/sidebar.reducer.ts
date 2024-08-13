@@ -1,7 +1,7 @@
 import { createReducer, on } from "@ngrx/store";
 
 import { SidebarState } from "../../shared/models/sidebar.models";
-import { showSide } from "../actions/header.actions";
+import { showSide } from "../actions/exam.actions";
 
 export const sidebarFeatureKey = "sidebar";
 

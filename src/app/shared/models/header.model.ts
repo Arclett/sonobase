@@ -1,3 +1,6 @@
 export enum HeaderActions {
-    SHOW_SIDE = "SHOW_SIDE",
+    CHANGE_TAB = "CHANGE_TAB",
+}
+export interface HeaderState {
+    tabIndex: number;
 }

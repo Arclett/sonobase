@@ -1,4 +1,36 @@
 :host {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
   width: 100%;
-  background-color: bisque;
+  height: 120px;
+  padding: 10px;
+  background-color: var(--tui-background-neutral-1);
+}
+
+.logo,
+.login,
+.sidebar_switch {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  grid-row: span 2;
+}
+
+.login {
+  justify-self: end;
+  margin: 0 30px;
+}
+
+.nav {
+  width: 40%;
+  justify-self: end;
+}
+
+img {
+  height: 60px;
+  margin: 0 30px;
 }

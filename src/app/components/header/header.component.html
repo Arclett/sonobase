@@ -1,2 +1,15 @@
-<h1>header works!</h1>
-<button (click)="onClick()">Show Side</button>
+<div class="logo">
+  <img src="../../../assets/svg/ultrasound-icon.svg" alt="logo" />
+  <h1>SonoBase</h1>
+</div>
+<div class="login">
+  <div class="status">Guest</div>
+  <button tuiButton appearance="floating" size="s">Sign In</button>
+</div>
+<tui-tabs class="nav" [(activeItemIndex)]="activeItemIndex">
+  <a tuiTab routerLink="/home" routerLinkActive>Home</a>
+  <a tuiTab routerLink="/exam" routerLinkActive>Examination</a>
+  <a tuiTab routerLink="/base" routerLinkActive>Patients</a>
+  <a tuiTab>Statistics</a>
+  <a tuiTab>Settings</a>
+</tui-tabs>

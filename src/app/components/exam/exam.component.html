@@ -1,1 +1,14 @@
-<p>exam works!</p>
+<div class="divider">
+  <div class="sidebar_switch">
+    <label tuiLabel>
+      <input
+        tuiSwitch
+        type="checkbox"
+        [(ngModel)]="isVisible"
+        (change)="onChange()"
+      />
+      Sidebar</label
+    >
+  </div>
+</div>
+<app-sidebar></app-sidebar>
