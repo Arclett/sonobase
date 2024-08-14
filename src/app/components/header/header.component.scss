@@ -21,8 +21,13 @@
 }
 
 .login {
+  display: flex;
+  justify-content: space-between;
   justify-self: end;
-  margin: 0 30px;
+  margin: 0 50px;
+  button {
+    margin: 0 20px;
+  }
 }
 
 .nav {

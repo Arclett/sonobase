@@ -6,10 +6,10 @@
   <div class="status">Guest</div>
   <button tuiButton appearance="floating" size="s">Sign In</button>
 </div>
-<tui-tabs class="nav" [(activeItemIndex)]="activeItemIndex">
+<tui-tabs class="nav">
   <a tuiTab routerLink="/home" routerLinkActive>Home</a>
   <a tuiTab routerLink="/exam" routerLinkActive>Examination</a>
-  <a tuiTab routerLink="/base" routerLinkActive>Patients</a>
-  <a tuiTab>Statistics</a>
-  <a tuiTab>Settings</a>
+  <a tuiTab routerLinkActive disabled>Patients</a>
+  <a tuiTab routerLinkActive disabled>Statistics</a>
+  <a tuiTab routerLink="/settings" routerLinkActive disabled>Settings</a>
 </tui-tabs>

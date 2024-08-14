@@ -20,6 +20,4 @@ import { TuiSwitch, TuiTabs } from '@taiga-ui/kit';
   styleUrl: './header.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {
-  activeItemIndex = 0;
-}
+export class HeaderComponent {}
