@@ -8,9 +8,9 @@ import { Observable } from "rxjs";
 
 import { selectExamMode } from "../../redux/selectors/exam.selectors";
 import { ExamSettingsComponent } from "./exam-settings/exam-settings.component";
+import { FormPatternComponent } from "./form-pattern/form-pattern.component";
 import { SidebarComponent } from "./sidebar/sidebar.component";
 import { TextfieldPatternComponent } from "./textfield-pattern/textfield-pattern.component";
-import { TextfieldTableComponent } from "./textfield-table/textfield-table.component";
 
 @Component({
     selector: "app-exam",
@@ -24,7 +24,7 @@ import { TextfieldTableComponent } from "./textfield-table/textfield-table.compo
         ExamSettingsComponent,
         CommonModule,
         TextfieldPatternComponent,
-        TextfieldTableComponent,
+        FormPatternComponent,
     ],
     templateUrl: "./exam.component.html",
     styleUrl: "./exam.component.scss",

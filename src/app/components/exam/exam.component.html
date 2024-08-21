@@ -1,8 +1,10 @@
 <div class="control"><app-exam-settings></app-exam-settings></div>
-<app-sidebar></app-sidebar>
-<ng-container *ngIf="(examMode | async) === 0"
-  ><app-textfield-pattern></app-textfield-pattern
-></ng-container>
-<ng-container *ngIf="(examMode | async) === 1"
-  ><app-textfield-table></app-textfield-table
-></ng-container>
+<div class="wrapper">
+  <app-sidebar></app-sidebar>
+  <ng-container *ngIf="(examMode | async) === 0"
+    ><app-textfield-pattern class="text"></app-textfield-pattern
+  ></ng-container>
+  <ng-container *ngIf="(examMode | async) === 1"
+    ><app-form-pattern></app-form-pattern
+  ></ng-container>
+</div>

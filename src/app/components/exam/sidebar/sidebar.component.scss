@@ -1,5 +1,7 @@
 .wrapper {
-  width: 100%;
-  background-color: var(--tui-background-neutral-2);
-  height: 100%;
+  width: 20vw;
+  padding: 10px;
+  .item {
+    background-color: var(--tui-background-neutral-2);
+  }
 }

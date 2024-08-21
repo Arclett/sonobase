@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { TextfieldTableComponent } from "./textfield-table.component";
+import { FormPatternComponent } from "./form-pattern.component";
 
-describe("TextfieldTableComponent", () => {
-    let component: TextfieldTableComponent;
-    let fixture: ComponentFixture<TextfieldTableComponent>;
+describe("FormPatternComponent", () => {
+    let component: FormPatternComponent;
+    let fixture: ComponentFixture<FormPatternComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TextfieldTableComponent]
+            imports: [FormPatternComponent]
         })
             .compileComponents();
 
-        fixture = TestBed.createComponent(TextfieldTableComponent);
+        fixture = TestBed.createComponent(FormPatternComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
