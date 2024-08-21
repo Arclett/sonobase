@@ -1,5 +1,22 @@
-.divider {
+:host {
+  height: 100%;
+}
+
+.control {
+  grid-column: span 2;
   width: 100%;
   height: 30px;
   padding: 5px;
+  box-shadow: var(--tui-shadow-medium);
+}
+
+.wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.text {
+  width: 70%;
+  height: 70vh;
 }

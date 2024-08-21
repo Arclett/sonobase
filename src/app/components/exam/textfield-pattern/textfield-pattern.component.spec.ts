@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SettingsComponent } from "./settings.component";
+import { TextfieldPatternComponent } from "./textfield-pattern.component";
 
-describe("SettingsComponent", () => {
-    let component: SettingsComponent;
-    let fixture: ComponentFixture<SettingsComponent>;
+describe("TextfieldPatternComponent", () => {
+    let component: TextfieldPatternComponent;
+    let fixture: ComponentFixture<TextfieldPatternComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SettingsComponent]
+            imports: [TextfieldPatternComponent]
         })
             .compileComponents();
 
-        fixture = TestBed.createComponent(SettingsComponent);
+        fixture = TestBed.createComponent(TextfieldPatternComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -1,0 +1,21 @@
+<div class="sidebar_switch">
+  <label tuiLabel>
+    <input
+      tuiSwitch
+      type="checkbox"
+      [(ngModel)]="isVisible"
+      (change)="onChange()"
+    />
+    Sidebar</label
+  >
+</div>
+<div class="modes">
+  <tui-segmented
+    [(activeItemIndex)]="activeMode"
+    (activeItemIndexChange)="onSelectMode()"
+  >
+    <button>pattern</button>
+    <button>form</button>
+    <button disabled>conclusion</button>
+  </tui-segmented>
+</div>
