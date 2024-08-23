@@ -5,7 +5,7 @@ import { headerFeatureKey } from "../reducers/header.reducer";
 
 export const selectHeaderFeature = createFeatureSelector<HeaderState>(headerFeatureKey);
 
-export const selectTabIndex = createSelector(
+export const selectShowModal = createSelector(
     selectHeaderFeature,
-    (state) => state.tabIndex
+    (state) => state.showModal
 );

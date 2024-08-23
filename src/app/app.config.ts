@@ -15,8 +15,9 @@ import { provideRouterStore } from "@ngrx/router-store";
 import { provideStore } from "@ngrx/store";
 import { NG_EVENT_PLUGINS } from "@taiga-ui/event-plugins";
 
-import { firebaseConfig } from "../environments/environments";
+import { firebaseConfig } from "../enviroments/environments";
 import { routes } from "./app.routes";
+import { AuthEffects } from "./redux/effects/auth.effects";
 import { metaReducers, reducers } from "./redux/reducers";
 
 export const appConfig: ApplicationConfig = {
@@ -27,7 +28,7 @@ export const appConfig: ApplicationConfig = {
         importProvidersFrom(RouterModule.forRoot(routes)),
         provideStore(reducers, { metaReducers }),
         provideAnimationsAsync(),
-        provideEffects(),
+        provideEffects(AuthEffects),
         NG_EVENT_PLUGINS,
         provideRouterStore(),
         provideFirebaseApp(() => initializeApp(firebaseConfig)),

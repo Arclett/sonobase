@@ -1,0 +1,11 @@
+<form [formGroup]="testForm">
+  <tui-input formControlName="testValue">
+    Type an email
+    <input tuiTextfieldLegacy type="mail" />
+  </tui-input>
+  <tui-input formControlName="testValue1">
+    Type an password
+    <input tuiTextfieldLegacy type="password" />
+  </tui-input>
+</form>
+<button (click)="createUser()">Sign In</button>
