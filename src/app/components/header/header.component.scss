@@ -8,13 +8,10 @@
   background-color: var(--tui-background-neutral-1);
 }
 
-.logo {
+.logo,
+.user-info {
   display: flex;
   align-items: center;
-}
-
-.logo {
-  grid-row: span 2;
 }
 
 .login {

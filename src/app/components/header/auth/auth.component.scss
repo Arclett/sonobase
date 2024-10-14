@@ -1,0 +1,26 @@
+.divider {
+  width: 20%;
+}
+
+.input {
+  margin: 10px 0;
+}
+
+button {
+  width: 100%;
+}
+
+.auth-nav {
+  display: flex;
+  justify-content: center;
+  background: var(--tui-background-base);
+
+  &::before {
+    color: var(--tui-text-action);
+    box-shadow: none;
+  }
+
+  .active {
+    color: #fff;
+  }
+}

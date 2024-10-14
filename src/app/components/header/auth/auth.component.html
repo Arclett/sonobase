@@ -1,11 +1,38 @@
-<form [formGroup]="testForm">
-  <tui-input formControlName="testValue">
-    Type an email
-    <input tuiTextfieldLegacy type="mail" />
-  </tui-input>
-  <tui-input formControlName="testValue1">
-    Type an password
-    <input tuiTextfieldLegacy type="password" />
-  </tui-input>
-</form>
-<button (click)="createUser()">Sign In</button>
+<div *ngIf="!(isAuthorized | async)" class="wrapper">
+  <tui-segmented [(activeItemIndex)]="active" class="auth-nav" size="l">
+    <button
+      *ngFor="let button of buttons; let index = index"
+      type="button"
+      [class.active]="index === active"
+    >
+      {{ button }}
+    </button></tui-segmented
+  >
+  <form [formGroup]="signInForm">
+    <tui-input *ngIf="active === 1" formControlName="userName" class="input">
+      Type an your Name
+      <input tuiTextfieldLegacy type="name" />
+    </tui-input>
+    <tui-input formControlName="mail" class="input">
+      Type an email
+      <input tuiTextfieldLegacy type="mail" />
+    </tui-input>
+    <tui-input formControlName="password" class="input">
+      Type an password
+      <input tuiTextfieldLegacy type="password" />
+    </tui-input>
+    <tui-input
+      *ngIf="active === 1"
+      formControlName="confirmPassword"
+      class="input"
+    >
+      Confirm an password
+      <input tuiTextfieldLegacy type="password" />
+    </tui-input>
+  </form>
+  <button (click)="signIn()" tuiButton *ngIf="active === 0">Sign In</button>
+  <button *ngIf="active === 1" tuiButton>Sign Up</button>
+</div>
+<div *ngIf="isAuthorized | async">
+  <button (click)="signOut()">Sign Out</button>
+</div>

@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 import { selectUserCollection } from '../../../redux/selectors/auth.selectors';
 import { selectSideVisible } from '../../../redux/selectors/exam.selectors';
 import { UserCollection } from '../../../shared/models/auth.models';
+import { Auth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-sidebar',
@@ -24,18 +25,11 @@ import { UserCollection } from '../../../shared/models/auth.models';
 })
 export class SidebarComponent implements OnInit {
   isVisible: Observable<boolean> | undefined;
-  userCollection: UserCollection | null = null;
-  private store$: Store = inject(Store);
-  private asyncPipe$ = inject(AsyncPipe);
+  userCollection: Observable<UserCollection | null> | undefined;
+  private store: Store = inject(Store);
+  auth = inject(Auth);
   ngOnInit(): void {
-    this.isVisible = this.store$.select(selectSideVisible);
-    this.userCollection = this.asyncPipe$.transform(
-      this.store$.select(selectUserCollection)
-    );
-  }
-
-  get patternsByZone() {
-    if (this.userCollection === null) return [];
-    return this.userCollection.patternByZone;
+    this.isVisible = this.store.select(selectSideVisible);
+    this.userCollection = this.store.select(selectUserCollection);
   }
 }
